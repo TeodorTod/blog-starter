@@ -1,1 +1,9 @@
-<p>signup works!</p>
+<app-header></app-header>
+<form class="h-screen w-screen flex flex-col justify-center items-center gap-3" [formGroup]="signupForm"
+    (ngSubmit)="signup()">
+    <input type="text" formControlName="username" required placeholder="username" class="custom-input p-5 w-60" />
+    <input type="password" formControlName="password" required placeholder="password" class="custom-input p-5 w-60" />
+    <button type="submit" class="bg-slate-600 rounded-lg p-5 w-60 text-white">
+        Submit
+    </button>
+</form>
